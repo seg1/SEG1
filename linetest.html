@@ -1,28 +1,38 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+<link rel="stylesheet" href="radar-chart.css">
 <head>
-<link rel="stylesheet" href="/radar-chart.css">
-<style type="text/css">
-.pathline {
-	stroke: blue;
-	stroke-width: 3;
-	fill: none;
-}
-#xline {
-	stroke: red;
-	
-}
-#yline {
-	stroke: black;
-}
-#pathline4 {
-	stroke: yellow;
-}
+  <style>
+    body {
+      padding: 20px;
+    }
+    .radar-chart .area {
+      fill-opacity: 0.7;
+    }
+    .radar-chart.focus .area {
+      fill-opacity: 0.3;
+    }
+    .radar-chart.focus .area.focused {
+      fill-opacity: 0.9;
+    }
+    .area.germany, .germany .circle {
+      fill: #FFD700;
+      stroke: none;
+    }
+    .area.argentina, .argentina .circle {
+      fill: #ADD8E6;
+      stroke: none;
+    }
+  </style>
 
-</style>
-<script type="text/javascript" src="http://d3js.org/d3.v3.js"></script>
-</head>
-<body>
+  <script type="text/javascript" src="http://d3js.org/d3.v3.js"></script>
+  <script type="text/javascript" src="../src/radar-chart.js"></script>
+
+
+  </head>
+  <body>
 <textarea id="data" cols="0" rows="0">網頁製作,R爬取資料,繪製圖表
 俊翰,5,10,7
 曉湉,10,5,5
@@ -87,5 +97,6 @@ animate(divVal,600);
 <script type="text/javascript">
     //RadarChart.defaultConfig.levelTick = true;
   </script>
+
 </body>
 </html>
