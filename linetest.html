@@ -65,23 +65,21 @@ d3.csv("./paper.csv", function(data) {
 	.attr("class", "pathline")
 	.attr("id","yline");
 	//點
-
+	var data = [   
+          {   
+                axes: [   
+                  {axis: "strength", value: 6},    
+                  {axis: "intelligence", value: 7},    
+                  {axis: "charisma", value: 10},     
+                  {axis: "dexterity", value: 13},     
+                  {axis: "luck", value: 9}   
+                ]   
+              }   
+            ];   
+        RadarChart.draw("#radar-chart", data);  
 	
 	
-	//讀取數值畫線
-
-	//文字規則
-	/*var text = ctrl.selectAll("text")
-                        .data([data])
-                        .enter()
-                        .append("text");
-	var textLabels = text
-                 .attr("x", function(d,i) { return i; })
-                 .attr("y", function(d) { return 500; })
-                 .text( function (d) { return "( " + d.year + ", " + d.total +" )"; })
-                 .attr("font-family", "sans-serif")
-                 .attr("font-size", "20px")
-                 .attr("fill", "red");*/
+	
 });
 </script>
 </body>
